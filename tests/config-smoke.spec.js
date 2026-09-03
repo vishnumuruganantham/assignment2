@@ -8,7 +8,7 @@ test('smoke', async ({ page }) => {
     await expect(page.locator('#login-btn')).toBeVisible();
 });
 
-test.only('page and browser context', async ({ page, browser }) => {
+test('page and browser context', async ({ page, browser }) => {
     await openLoginPage(page);
     await page.locator('#email').fill('beginner@sample.com');
     await expect(page.locator('#email')).toHaveValue('beginner@sample.com');
